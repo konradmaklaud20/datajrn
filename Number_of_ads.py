@@ -1,3 +1,9 @@
+import pandas as pd
+import plotly.express as px
+import plotly
+import plotly.graph_objs as go
+
+
 df = pd.read_csv('nedvizh.csv')
 df = df.dropna().reset_index(drop=True)
 df = df.loc[df['rooms'] != 'Студия'].reset_index(drop=True)
